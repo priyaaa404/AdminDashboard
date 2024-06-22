@@ -1,38 +1,149 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  height: 100vh;
+}
+
+.content {
+  flex-grow: 1;
+  padding: 20px;
+  transition: margin-left var(--transition-speed);
+  overflow-y: auto;
+}
+
+/* Add smooth transitions */
+.MuiPaper-root,
+.MuiButtonBase-root,
+.MuiTypography-root,
+.MuiSvgIcon-root {
+  transition: all var(--transition-speed) ease-in-out !important;
+}
+
+/* Enhance card styles */
+.MuiPaper-root {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08) !important;
+}
+
+.MuiPaper-root:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 7px 14px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Enhance button styles */
+.MuiButton-root {
+  text-transform: none !important;
+  font-weight: 500 !important;
+}
+
+.MuiButton-containedPrimary:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Add some animation to icons */
+.MuiSvgIcon-root {
+  transition: transform var(--transition-speed) ease-in-out !important;
+}
+
+.MuiSvgIcon-root:hover {
+  transform: scale(1.2);
+}
+
+/* Enhance table styles */
+.MuiTableRow-root:hover {
+  background-color: rgba(0, 0, 0, 0.04) !important;
+}
+
+/* Responsive font sizes */
+@media (max-width: 600px) {
+  .MuiTypography-h4 {
+    font-size: 1.5rem !important;
+  }
+  .MuiTypography-h6 {
+    font-size: 1.1rem !important;
+  }
+}
+
+/* Add a subtle gradient background to the app */
+.app {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+/* Style for dashboard cards */
+.dashboard-card {
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all var(--transition-speed) ease-in-out;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06) !important;
+}
+
+/* Add some animation to the sidebar */
+.MuiDrawer-paper {
+  transition: width var(--transition-speed) ease-in-out !important;
+}
+
+/* Enhance form field styles */
+.MuiTextField-root,
+.MuiSelect-root {
+  margin-bottom: 16px !important;
+}
+
+/* Add a subtle hover effect to clickable items */
+.MuiListItem-root,
+.MuiMenuItem-root {
+  transition: background-color var(--transition-speed) ease-in-out !important;
+}
+
+.MuiListItem-root:hover,
+.MuiMenuItem-root:hover {
+  background-color: rgba(0, 0, 0, 0.04) !important;
+}
+
+/* Calendar styles */
+.rbc-calendar {
+  font-family: Arial, sans-serif;
+}
+
+.rbc-header {
+  background-color: #f0f0f0;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.rbc-event {
+  background-color: #3174ad;
+  border-radius: 5px;
   color: white;
+  border: none;
 }
 
-.App-link {
-  color: #61dafb;
+.rbc-today {
+  background-color: #e8f4ff;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.rbc-selected {
+  background-color: #216ba5;
+}
+
+.rbc-toolbar {
+  margin-bottom: 20px;
+}
+
+.rbc-toolbar button {
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin: 0 2px;
+  padding: 5px 10px;
+}
+
+.rbc-toolbar button:hover {
+  background-color: #e6e6e6;
+}
+
+.rbc-toolbar button.rbc-active {
+  background-color: #337ab7;
+  color: #fff;
 }
