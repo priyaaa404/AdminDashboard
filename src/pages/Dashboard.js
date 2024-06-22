@@ -1,41 +1,4 @@
-// import React from 'react';
-// import { Grid, Paper, Typography, Box } from '@mui/material';
 
-// const Dashboard = () => {
-//   return (
-//     <Box>
-//       <Typography variant="h4" gutterBottom>
-//         Dashboard
-//       </Typography>
-//       <Grid container spacing={3}>
-//         {['Users', 'Revenue', 'Orders', 'Traffic'].map((title, index) => (
-//           <Grid item xs={12} sm={6} md={3} key={index}>
-//             <Paper
-//               sx={{
-//                 p: 2,
-//                 display: 'flex',
-//                 flexDirection: 'column',
-//                 height: 140,
-//                 justifyContent: 'center',
-//                 alignItems: 'center',
-//                 background: (theme) =>
-//                   `linear-gradient(45deg, ${theme.palette.primary.main} 30%, ${theme.palette.primary.light} 90%)`,
-//                 color: 'white',
-//               }}
-//             >
-//               <Typography variant="h4" component="div">
-//                 {Math.floor(Math.random() * 1000)}
-//               </Typography>
-//               <Typography variant="h6">{title}</Typography>
-//             </Paper>
-//           </Grid>
-//         ))}
-//       </Grid>
-//     </Box>
-//   );
-// };
-
-// export default Dashboard;
 import React, { useState, useEffect } from 'react';
 import { Grid, Paper, Typography, Box, Icon } from '@mui/material';
 import { PeopleAlt, AttachMoney, ShoppingCart, TrendingUp } from '@mui/icons-material';
